@@ -37,6 +37,23 @@ Skills are auto-discovered based on context. Ask about Drift perpetuals, Helius 
 
 **Verify:** Ask *"How do I place a perp order on Drift?"* — if working, the agent will reference Drift SDK patterns.
 
+### OpenCode
+
+Use the install script to add skills to your project's `.opencode/instructions.md`:
+
+```bash
+# From the repo root
+./scripts/install-opencode.sh drift jupiter helius
+```
+
+Or manually copy a skill:
+
+```bash
+mkdir -p .opencode
+# Strip frontmatter and append
+sed '1{/^---$/!q;};1,/^---$/d' skills/drift/SKILL.md >> .opencode/instructions.md
+```
+
 ### Any Agent
 
 ```
