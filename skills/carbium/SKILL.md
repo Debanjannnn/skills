@@ -611,6 +611,7 @@ These endpoints are still operational but use the older parameter family. Do not
 | `/api/v1/quote/all` | GET | `fromMint`, `toMint`, `amount`, `slippage` | Compare quotes across all providers |
 | `/api/v1/swap` | GET | `owner`, `fromMint`, `toMint`, `amount`, `slippage`, `provider` + optional flags | Get serialized swap transaction |
 | `/api/v1/swap/bundle` | GET | `signedTransaction` | Submit via Jito bundle (MEV protection) |
+| `/api/v1/fee/custom` | GET | `payer`, `receiver`, `lamports` | Generate custom fee transfer transaction |
 
 v1 `/swap` supports additional execution flags: `gasless`, `mevSafe`, `priorityMicroLamports`, `feeLamports`, `feeReceiver`, `pool`.
 
